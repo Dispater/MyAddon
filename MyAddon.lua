@@ -28,6 +28,7 @@ function MAAddonLoaded()
 end
 
 function MAPlayerTargetChanged()
+	if UnitName("target") ~= nil then 
 	SetMapToCurrentZone()
    	posx, posy = GetPlayerMapPosition("player")
    	local index = math.random(1,1000000000) .. UnitName("target")
@@ -35,6 +36,8 @@ function MAPlayerTargetChanged()
    	ChatFrame1:AddMessage(posy)
    	ChatFrame1:AddMessage(UnitName("target"))
    	ChatFrame1:AddMessage(UnitLevel("target"))
-   	MyAddonData[index] = UnitName("target") .. "//" .. UnitLevel("target") .. "//" .. posx .. "//" .. posy
+   	MyAddonData[index] = UnitName("target") .. "|" .. UnitLevel("target") .. "|" .. UnitHealthMax("target") .. "|" .. UnitCreatureType("target") .. "|" .. UnitDamage("target") .. "|" .. UnitRangedDamage("target") .. "|" .. UnitReaction("target","player") .. "|" .. posx .. "|" .. posy 
+   else
+   end
 end
 
