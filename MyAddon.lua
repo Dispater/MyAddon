@@ -30,11 +30,11 @@ end
 function MAPlayerTargetChanged()
 	SetMapToCurrentZone()
    	posx, posy = GetPlayerMapPosition("player")
-   	local index = "x" .. math.floor(posx*10000000) .. "y" .. math.floor(posy*10000000)
+   	local index = math.random(1,1000000000) .. UnitName("target")
    	ChatFrame1:AddMessage(index)
    	ChatFrame1:AddMessage(posy)
    	ChatFrame1:AddMessage(UnitName("target"))
    	ChatFrame1:AddMessage(UnitLevel("target"))
-   	MyAddonData[index] = UnitName("target") .. UnitLevel("target") 
+   	MyAddonData[index] = UnitName("target") .. "//" .. UnitLevel("target") .. "//" .. posx .. "//" .. posy
 end
 
