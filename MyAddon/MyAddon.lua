@@ -1,4 +1,4 @@
--- Marmaites
+-- Marmaites and my edit here
 local playerName = UnitName("player")
 ChatFrame1:AddMessage('Hi my name is: ' .. playerName .. " my level is " .. UnitLevel("player")+1) 
 function MAOnLoad()
