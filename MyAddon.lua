@@ -21,7 +21,9 @@ function MAOnEvent()
 end
 
 function MAAddonLoaded()
-	MyAddonData = MyAddonData or {}
+	MyAddonData = MyAddonData or {
+	[1] = "test"
+}
 	ChatFrame1:AddMessage(MyAddonData[1])
 end
 
