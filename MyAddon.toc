@@ -1,0 +1,6 @@
+## Interface: 70300
+## Title: MyAddon
+## Notes: Notes about MyAddon
+## Version: 1.0
+MyAddon.lua
+MyAddon.xml

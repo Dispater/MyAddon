@@ -1,8 +1,0 @@
-<Ui>
-<Frame name="FooAddonFrame">
-	<Scripts>
-			<OnLoad>MAOnLoad();</OnLoad>
-			<OnEvent>MAOnEvent(event);</OnEvent>
-		</Scripts>
-</Frame>
-</Ui>
