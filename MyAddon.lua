@@ -1,8 +1,6 @@
 -- Marmaites and my edit here test
 
-MyAddonData = {
-	[1] = "test"
-}
+MyAddonData = {}
 local playerName = UnitName("player")
 ChatFrame1:AddMessage('Hi my name is: ' .. playerName .. " my level is " .. UnitLevel("player")+1) 
 
@@ -22,7 +20,7 @@ end
 
 function MAAddonLoaded()
 	MyAddonData = MyAddonData or {
-	[1] = "test"
+	[1] = "UnitName | UnitLevel | UnitHealthMax | UnitCreatureType | UnitDamage | UnitRangedDamage | UnitReaction | posx | posy"
 }
 	ChatFrame1:AddMessage(MyAddonData[1])
 end
