@@ -31,7 +31,7 @@ function MAPlayerTargetChanged()
 	if UnitName("target") ~= nil then 
 	SetMapToCurrentZone()
    	posx, posy = GetPlayerMapPosition("player")
-   	local index = math.random(1,1000000000) .. UnitName("target")
+   	local index = UnitName("target") .. math.random(1,1000000000) 
    	ChatFrame1:AddMessage(index)
    	ChatFrame1:AddMessage(posy)
    	ChatFrame1:AddMessage(UnitName("target"))
