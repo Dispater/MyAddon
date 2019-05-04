@@ -1,22 +1,28 @@
 -- Marmaites and my edit here test
+
+MyAddonData = MyAddonData or {
+	[1] = "test"
+}
 local playerName = UnitName("player")
 ChatFrame1:AddMessage('Hi my name is: ' .. playerName .. " my level is " .. UnitLevel("player")+1) 
+
 function MAOnLoad()
-MAEventHandlers = {VARIABLES_LOADED = {f=MAVariablesLoaded}, PLAYER_TARGET_CHANGED = {f=MAPlayerTargetChanged},}
-		this:RegisterEvent("VARIABLES_LOADED")
+MAEventHandlers = {
+		ADDON_LOADED = 	{f=MAAddonLoaded}, 
+		PLAYER_TARGET_CHANGED = {f=MAPlayerTargetChanged}
+		}
+
+		this:RegisterEvent("ADDON_LOADED")
 		this:RegisterEvent("PLAYER_TARGET_CHANGED")
 end
 
 function MAOnEvent()
 	MAEventHandlers[event].f()
-	if event == PLAYER_LOGOUT then
-	end
-
 end
 
-function MAVariablesLoaded()
+function MAAddonLoaded()
 	MyAddonData = MyAddonData or {}
-	ChatFrame1:AddMessage(MyAddonData)
+	ChatFrame1:AddMessage(MyAddonData[1])
 end
 
 function MAPlayerTargetChanged()

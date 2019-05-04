@@ -2,5 +2,10 @@
 ## Title: MyAddon
 ## Notes: Notes about MyAddon
 ## Version: 1.0
+## SavedVariables: MyAddonData
+
+#lua files
 MyAddon.lua
+
+#xml files
 MyAddon.xml
