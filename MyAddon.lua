@@ -1,6 +1,6 @@
 -- Marmaites and my edit here test
 
-MyAddonData = MyAddonData or {
+MyAddonData = {
 	[1] = "test"
 }
 local playerName = UnitName("player")
@@ -32,6 +32,6 @@ function MAPlayerTargetChanged()
    	ChatFrame1:AddMessage(posy)
    	ChatFrame1:AddMessage(UnitName("target"))
    	ChatFrame1:AddMessage(UnitLevel("target"))
-   	MyAddonData = UnitName("target")
+   	MyAddonData[1] = UnitName("target")
 end
 
